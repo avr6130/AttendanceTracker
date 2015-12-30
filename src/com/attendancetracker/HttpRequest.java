@@ -1,3 +1,6 @@
+// Author: Anthony Ricco 12/29/2015
+// Copied from http://stackoverflow.com/questions/2253061/secure-http-post-in-android/2253280#2253280
+
 package com.attendancetracker;
 
 import java.io.IOException;

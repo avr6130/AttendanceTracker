@@ -1,3 +1,5 @@
+// Author: Anthony Ricco 12/29/2015
+
 package com.attendancetracker;
 
 import android.app.Activity;
@@ -138,6 +140,7 @@ public class MainActivity extends Activity implements OnClickListener {
 	}
 
 	 protected void onDestroy() {
+		 	super.onDestroy();
 	        dbmLooperThread.mHandler.getLooper().quit();
 	    }
 }

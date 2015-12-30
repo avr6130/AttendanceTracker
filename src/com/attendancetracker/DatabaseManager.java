@@ -1,3 +1,6 @@
+// Author: Anthony Ricco 12/29/2015
+// Used this reference: https://www.safaribooksonline.com/library/view/efficient-android-threading/9781449364120/ch04.html#CO1-6
+
 package com.attendancetracker;
 
 import java.net.URLEncoder;

@@ -1,3 +1,5 @@
+// Author: Anthony Ricco 12/29/2015
+
 package com.attendancetracker;
 
 public class Person {
