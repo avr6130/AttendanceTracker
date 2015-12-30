@@ -34,12 +34,19 @@ public class DatabaseManager extends Thread {
 		Thread t = Thread.currentThread();
 		long l = t.getId();
 		String name = t.getName();
-		String fullUrl = "https://docs.google.com/forms/d/1SI-qO4ocEMPtC4mdDiwDeHS_6yPtpUaz3RsVc8STI6A/formResponse";
+		// URL for the old form 
+//		String fullUrl = "https://docs.google.com/forms/d/1SI-qO4ocEMPtC4mdDiwDeHS_6yPtpUaz3RsVc8STI6A/formResponse";
+		// URL for the new form called Attendance Tracker
+		String fullUrl = "https://docs.google.com/forms/d/1U0ri7PsC0RNADRfy9txxjpPmkTbTurX8d-ufkS91Az0/formResponse";
 		HttpRequest mReq = new HttpRequest();
 
 		@SuppressWarnings("deprecation")
-		String data = "entry_1397604506=" + URLEncoder.encode(person.getName()) + "&"  +
-				"entry_472008123=" + URLEncoder.encode(person.getPhoneNum());
+		// The following are the formats for the OLD Google Forms version.
+//		String data = "entry_1397604506=" + URLEncoder.encode(person.getName()) + "&"  +
+//				"entry_472008123=" + URLEncoder.encode(person.getPhoneNum());
+		// The following are the formats for the new Google Forms version.
+		String data = "entry.121767134=" + URLEncoder.encode(person.getName()) + "&"  +
+				"entry.1669406896=" + URLEncoder.encode(person.getPhoneNum());
 		String response = mReq.sendPost(fullUrl, data);
 		Log.i(logTag, response);
 	}
